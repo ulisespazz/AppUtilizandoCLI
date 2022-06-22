@@ -1,3 +1,4 @@
+import CartWidget from './CartWidget';
 import './NavBar.css'
 
 function NavBar() {
@@ -13,6 +14,7 @@ function NavBar() {
                         <li><a href="TiposMasajes.html">Productos</a></li>
                     </ul>
                 </div>
+                <CartWidget />
             </nav>
         </header>
     );
