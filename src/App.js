@@ -1,4 +1,5 @@
 import './App.css';
+import ItemCount from './components/ItemCount';
 import Card from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 
@@ -7,6 +8,8 @@ function App() {
     <div className="App">
       <NavBar/>
       <Card/>
+      <hr/>
+      <ItemCount/>
     </div>
   );
 }
