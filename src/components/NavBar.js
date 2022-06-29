@@ -4,11 +4,11 @@ import './NavBar.css'
 function NavBar() {
     return(
         <header>
-            <nav class="Navbar">
-                <div class="brand-title">
+            <nav className="Navbar">
+                <div className="brand-title">
                     <p>Kiosco</p>  
                 </div>
-                <div class="navbar-links">
+                <div className="navbar-links">
                     <ul>
                         <li><a href="InformacionPersonal.html">Inicio</a></li>
                         <li><a href="TiposMasajes.html">Productos</a></li>

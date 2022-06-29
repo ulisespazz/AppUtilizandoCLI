@@ -1,9 +1,25 @@
-import './Card.css'
+import './ItemListContainer.css'
+import productosDB from "../data/productos";
+import React, { useEffect, useState } from 'react';
+import ItemList from './ItemList';
 
-function Card() {
+function getProductos(){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            resolve(productosDB);
+        }, 500);
+    });
+}
+function ItemListContainer() {
+    const [productos, setProductos] = useState([]);
+
+    useEffect( () =>{
+        getProductos().then(rtaPromise => {
+            setProductos(rtaPromise);
+        })
+    }, []);
     return(
-        <h3>Aca iran las cards.</h3>
+        <ItemList productos={productos}/>
     );
 }
-
-export default Card;
+export default ItemListContainer;
