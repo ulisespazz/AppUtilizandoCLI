@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import './ItemCount.css'
+
 function ItemCount() {
     const [count, setCount] = useState(1);
 
@@ -18,7 +20,7 @@ function ItemCount() {
                     <strong>Compra tus Productos</strong> 
                 </p>
                 <div>
-                    <div>
+                    <div className="btnSyR">
                         <button type="button" className="btn btn-outline-secondary" onClick={restarCantidad}>-</button>
                         <span>    { count }    </span>
                         <button type="button" className="btn btn-outline-secondary" onClick={sumaCantidad}>+</button>
