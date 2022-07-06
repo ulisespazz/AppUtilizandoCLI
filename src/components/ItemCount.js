@@ -26,7 +26,7 @@ function ItemCount() {
                         <button type="button" className="btn btn-outline-secondary" onClick={sumaCantidad}>+</button>
                     </div>
                     <div>
-                        <button type="button" className="btn btn-outline-secondary">Agregar al Carrito</button>
+                        <button type="button" className="btn btn-outline-secondary">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
