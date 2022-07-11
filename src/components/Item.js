@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './Item.css'
-import ItemCount from './ItemCount';
 
 function Item( { productos } ) {
     return(
@@ -12,10 +11,11 @@ function Item( { productos } ) {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Tipo producto: {productos.tipoProducto}</li>
                 <li class="list-group-item">Precio: {productos.precio}</li>
-                <li class="list-group-item"> <ItemCount/> </li>
-                <button type="button" className="btn btn-outline-secondary">
-                    <Link activeClassName='active' to={`/id/${productos.id}`}>Ver producto</Link> 
-                </button>
+                <li class="list-group-item">
+                    <button type="button botonVer" className="btn btn-outline-secondary">
+                        <Link className='linkVer' activeClassName='active' to={`/id/${productos.id}`}>Ver producto</Link> 
+                    </button>
+                </li>
             </ul>
         </div>
     )
