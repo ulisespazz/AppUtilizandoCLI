@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import './Item.css'
 import ItemCount from './ItemCount';
+import useCartContext from './CartContext';
 
 function ItemDetail( { producto } ) {
+
+    const { addToCart } = useCartContext();
 
     const [isInCart, setIsInCart] = useState(false);
 
     function onAdd(count){
         console.log(`Agregaste al carrito ${count} prodcutos`);
+        console.log('Agregaste al cart', producto, count);
         setIsInCart(true);
+        addToCart(producto, count)
     }
 
     return(
