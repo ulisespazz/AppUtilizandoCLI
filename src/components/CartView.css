@@ -1,0 +1,11 @@
+.cards{
+    display: inline-block;
+   
+}
+.cards2 {
+    display: flex;
+    
+}
+.btn1{
+    margin: 5px;
+}

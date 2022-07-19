@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Item.css'
 import ItemCount from './ItemCount';
 import useCartContext from './CartContext';
+import { Link } from 'react-router-dom';
 
 function ItemDetail( { producto } ) {
 
@@ -16,8 +17,12 @@ function ItemDetail( { producto } ) {
         addToCart(producto, count)
     }
 
+    if (!producto){
+        return <h4> Cargando . . .</h4>
+    }else{
     return(
         <div className="card">
+            <img src={producto.img} class="card-img-top" alt=''></img>
             <div className="card-body">
                 <h5 class="card-title">{producto.producto}</h5>
             </div>
@@ -27,7 +32,9 @@ function ItemDetail( { producto } ) {
                  
                 {isInCart?
                     <li className="list-group-item">
-                        <button type="button" className="btn btn-outline-secondary" >Comprar</button>
+                        <Link to='/cart'> 
+                            <button type="button" className="btn btn-outline-secondary" >Comprar</button> 
+                        </Link>
                     </li>
                 :
                     <li className="list-group-item"><ItemCount onAdd={onAdd} /></li>
@@ -36,6 +43,7 @@ function ItemDetail( { producto } ) {
             </ul>
         </div>
     )
+}
 }
 
 export default ItemDetail;

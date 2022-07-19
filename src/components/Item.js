@@ -4,7 +4,7 @@ import './Item.css'
 function Item( { productos } ) {
     return(
         <div class="card">
-            <img src={require(`../assets/img/${productos.img}`)} class="card-img-top" alt=''></img>
+            <img src={productos.img} class="card-img-top" alt=''></img>
             <div class="card-body">
                 <h5 class="card-title">{productos.producto}</h5>
             </div>
