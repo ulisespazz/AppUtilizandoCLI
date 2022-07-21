@@ -1,4 +1,4 @@
-import img1 from "../assets/img/producto1.jpg"
+/*import img1 from "../assets/img/producto1.jpg"
 import img2 from "../assets/img/producto2.jpg"
 import img3 from "../assets/img/producto3.jpg"
 import img4 from "../assets/img/producto4.jpg"
@@ -128,4 +128,4 @@ const productos = [{
     }
 ];
 
-export default productos;
+export default productos; */
