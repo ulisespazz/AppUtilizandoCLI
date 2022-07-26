@@ -1,9 +1,7 @@
-import { createContext, useState } from "react"; 
-import { useContext } from "react";
+import { createContext, useState, useContext } from "react"; 
 
 const CartContext = createContext();
-const useCartContext = () =>useContext(CartContext);
-
+const useCartContext = () => useContext(CartContext);
 const { Provider } = CartContext;
 
 export function CartContextProvider({children}){
@@ -42,10 +40,25 @@ export function CartContextProvider({children}){
         return setCart([])
     }
 
+    const calcPriceCart = () =>{
+        let total = 0;
+        cart.forEach(itemCart => {
+            total+=itemCart.cant  
+        });
+        return total;
+    }
+
+    const totalCart = () => {
+        let totalFinal = cart.reduce(
+            (acc, item) => acc + item.cant * item.precio, 0
+        )
+        return totalFinal;
+    }
+
     const contextFunction = ()=> console.log("contexto listo!");
 
     return(
-        <Provider value={ { contextFunction, cart, addToCart, removeFromCart, isInCart, clearCart} }>
+        <Provider value={ { contextFunction, cart, addToCart, removeFromCart, isInCart, clearCart, totalCart, calcPriceCart} }>
             {children}
         </Provider>
     )
