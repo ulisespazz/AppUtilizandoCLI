@@ -18,18 +18,18 @@ function CartView(){
         }))
 
         const buyOrder = {
-        buyer: {
-            name: "Ulises Paz",
-            phone: "1159468980",
-            email: "ulises@coder.com",
-        },
-        items: cantItems,
-        date: new Date(),
-        total: totalCart()
+            buyer: {
+                name: "Ulises Paz",
+                phone: "1159468980",
+                email: "ulises@coder.com",
+            },
+            items: cantItems,
+            date: new Date(),
+            total: totalCart()
+        }
+        createBuyOrder( buyOrder )
+        setOrderDone(true)
     }
-    createBuyOrder( buyOrder )
-    setOrderDone(true)
-}
     
 
     console.log("cart:", cart)
