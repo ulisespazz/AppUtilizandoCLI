@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
 import useCartContext from './CartContext';
 import { Link } from 'react-router-dom';
 import './CartView.css'
@@ -7,11 +6,10 @@ import { createBuyOrder } from '../services/firestore';
 
 function CartView(){
     const { cart, clearCart, removeFromCart, totalCart } = useCartContext();
-    const [orderDone, setOrderDone] = useState(false)
 
     function handleBuy(){   
         const cantItems = cart.map((item) => ({
-            title: item.descripcion,
+            title: item.producto,
             cant: item.cant,
             price: item.precio,
             id: item.id,
@@ -28,21 +26,20 @@ function CartView(){
             total: totalCart()
         }
         createBuyOrder( buyOrder )
-        setOrderDone(true)
+        
     }
     
 
     console.log("cart:", cart)
     if (cart.length === 0){
         return <div>
-            {orderDone ? <h3>¡Compra confirmada! ID de su compra:</h3> :
+            <h3>¡Compra confirmada! ID de su compra:</h3> 
                 <div className="text-center">
                     <h4>No hay prodcutos en el carrito.</h4>
                     <Link to='/'> 
                         <button type="button" className="btn btn-outline-secondary" > Volver al Catálogo </button> 
                     </Link>
                 </div>
-            }
             </div> 
     }else { 
         return<div className="cards">   

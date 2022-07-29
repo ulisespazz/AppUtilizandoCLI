@@ -64,6 +64,7 @@ export async function createBuyOrder(orderData){
     console.log("orden id", orderDoc.id)
 }
 
+/*
 export async function dataToFirebase(){
     const PRODUCTOS = [{
         producto : "Agua",
@@ -175,6 +176,6 @@ export async function dataToFirebase(){
             });
     });
 }
+*/
 
-
-export default db
+export default db;
