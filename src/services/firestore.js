@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {  collection, getDocs, getFirestore, doc, getDoc, where,Timestamp, addDoc, Query, setDoc } from "firebase/firestore";
+import {  collection, getDocs, getFirestore, doc, getDoc, where,Timestamp, addDoc, Query} from "firebase/firestore";
+import Swal from "sweetalert2";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -62,6 +63,13 @@ export async function createBuyOrder(orderData){
     const orderDoc = await addDoc(orderCollectionRef,orderFull)
   
     console.log("orden id", orderDoc.id)
+    
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada con éxito',
+        text: orderDoc.id,
+        confirmButtonText: 'Aceptar',
+    })
 }
 
 /*

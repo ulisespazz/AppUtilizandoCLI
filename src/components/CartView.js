@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
-import useCartContext from './CartContext';
+import useCartContext from '../components/CartContext';
 import { Link } from 'react-router-dom';
 import './CartView.css'
-import UserForm from '../components/ExpenseForm';
-import Swal from 'sweetalert2';
+import ExpenseForm from '../components/ExpenseForm';
 import { useState } from 'react';
 
 function CartView(){
@@ -34,9 +33,10 @@ function CartView(){
     }
     console.log("cart:", cart)
     */
-    function handleBuy(){
+    const handleBuy = () =>{
         setFinalCompra(true)
     }
+    
 
     if (cart.length === 0){
         return (
@@ -85,7 +85,7 @@ function CartView(){
                         <button onClick={handleBuy} className="btn btn-light m-1">Finalizar Compra</button>
                     </div>
                     <div className='d-flex mt-4'>
-                        {finalCompra ? <UserForm/> : <></>}
+                        {finalCompra ? <ExpenseForm/> : <></>}
                     </div>
             </div>
             )

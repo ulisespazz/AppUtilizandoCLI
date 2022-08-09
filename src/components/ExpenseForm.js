@@ -4,7 +4,7 @@ import useCartContext from '../components/CartContext';
 import { useState } from 'react';
 
 
-function UserForm(){ /*Formulario para enviar datos a la db */
+function ExpenseForm(){ /*Formulario para enviar datos a la db */
 
     const [newName, setNewName] = useState("")
     const [newEmail, setNewEmail] = useState("")
@@ -20,11 +20,11 @@ function UserForm(){ /*Formulario para enviar datos a la db */
         setnewProduct(event.target.value)
     }
     
-    const { cart, totalCart, clearCart, alertClearCart } = useCartContext();
+    const { cart, totalCart, clearCart } = useCartContext();
     
     function Buy(){   
         const cantItems = cart.map((item) => ({
-            title: item.descripcion,
+            title: item.producto,
             cant: item.cant,
             price: item.precio,
             id: item.id,
@@ -41,7 +41,6 @@ function UserForm(){ /*Formulario para enviar datos a la db */
             date: new Date(),
             total: totalCart()
             }
-        alertClearCart()
         createBuyOrder(buyOrder)
         clearCart()
     }
@@ -66,4 +65,4 @@ return(
     )
     
 }
-export default UserForm;
+export default ExpenseForm;
