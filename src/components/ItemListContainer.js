@@ -18,7 +18,7 @@ function ItemListContainer() {
         })
     }, [idcategoria]);
     return(
-        <section>
+        <section >
             <ItemList productos={productos}/>
             
         </section>

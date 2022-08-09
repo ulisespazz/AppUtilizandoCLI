@@ -8,7 +8,7 @@ function NavBar() {
         <header>
             <nav className="Navbar">
                 <div className="brand-title">
-                    <p>Kiosco</p>  
+                    <Link to='/'> Kiosco </Link>
                 </div>
                 <div className="navbar-links">
                     <ul>

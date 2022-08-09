@@ -1,9 +1,32 @@
 .card{
-    width: 18rem;
+    width: 14rem;
     display: inline-block;
-    margin: 10px;
+    margin: 12px;
+    /*border: none;*/
+    /*background-color: #fd868c;*/
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: rgb(0 0 0 / 25%) 0px 20px 40px;
+    backdrop-filter: blur(80px);
+    border-color: #ffbfbf ;
 }
-.linkVer{
+.btn a{
     text-decoration: none;
-    color: black;
+    color: #000000;
+}
+.list-group-item{
+    /*color: #2c698d;*/
+    color: #000000   ;
+    /*background-color: #fd868c;*/
+    border-color: #ffbfbf ;
+    
+}
+.card-title{
+    /*color: #2c698d;*/
+    color: #000000   ;
+}
+.card-img-top{
+    width: 96%;
+    margin-top: 5px;
+    border-radius: 1%;
 }

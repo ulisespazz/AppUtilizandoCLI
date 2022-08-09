@@ -1,11 +1,10 @@
 .cards{
     display: inline-block;
-   
 }
 .cards2 {
-    display: flex;
-    
+    display: flex; 
 }
-.btn1{
-    margin: 5px;
+.buttons{
+    display: flex;
+    justify-content:center;
 }

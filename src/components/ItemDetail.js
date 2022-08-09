@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Item.css'
+import './ItemDetail.css'
 import ItemCount from './ItemCount';
 import useCartContext from './CartContext';
 import { Link } from 'react-router-dom';
@@ -18,7 +18,11 @@ function ItemDetail( { producto } ) {
     }
 
     if (!producto){
-        return <h4> Cargando . . .</h4>
+        return ( 
+            <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        )
     }else{
     return(
         <div className="card">
@@ -33,7 +37,10 @@ function ItemDetail( { producto } ) {
                 {isInCart?
                     <li className="list-group-item">
                         <Link to='/cart'> 
-                            <button type="button" className="btn btn-outline-secondary" >Comprar</button> 
+                            <button type="button" className="btn btn-outline-danger" >Comprar</button> 
+                        </Link>
+                        <Link to='/'>
+                            <button type="button" className="btn btn-outline-danger" >Seguir comprando</button>
                         </Link>
                     </li>
                 :
