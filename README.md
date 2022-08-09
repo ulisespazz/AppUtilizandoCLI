@@ -69,5 +69,36 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+# kiosco
+
+Mi App es un e-commerce para la venta de productos (bebidas, golosinas y snacks).
+
+Cuenta con:
+    -Vistas de productos: vista general de productos con foto, detalle y precio.
+    -Filtro por categorías: Tomando los tipos de productos de la base de datos, se generan filtros de productos.
+    -Carrito: Contiene la vista de los items, su total, la opción de sacar un producto del carrito y vaciar por completo el carrito.
+
+## Dependencias
+
+-testing-library/jest-dom
+-testing-library/react
+-testing-library/user-event
+-cloudinary
+-firebase
+-react
+-react-dom
+-react-router-dom
+-react-scripts
+-sweetalert2
+-web-vitals
+-bootstrap
+
+## Aplicación en funcionamiento
+
+### Autor
+
+Ulises Diego Paz
+
+2022 - Curso de React CoderHouse
 
 ![alt text](https://github.com/ulisespazz/AppUtilizandoCLI/blob/main/src/assets/proyectoFinal.gif)
